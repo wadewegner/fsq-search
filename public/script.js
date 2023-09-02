@@ -28,8 +28,24 @@ $(document).ready(function () {
         let responseHTML = converter.makeHtml(data.response);
         let resultText =
           '<h5 class="card-title">You asked: ' + searchVal + "</h5>";
+
+        let linksHTML = "<ul>";
+        for (let i = 0; i < data.links.length; i++) {
+          linksHTML +=
+            '<li><a href="' +
+            data.links[i] +
+            '" target="_blank">' +
+            data.links[i] +
+            "</a></li>";
+        }
+        linksHTML += "</ul>";
+
         let result =
-          '<div class="card-body">' + resultText + responseHTML + "</div>";
+          '<div class="card-body">' +
+          resultText +
+          responseHTML +
+          linksHTML +
+          "</div>";
 
         let card = '<div class="card mt-4">' + result + "</div>";
         $("#results").prepend(card);

@@ -22,7 +22,7 @@ app.post("/api", async (req, res) => {
       isChatHistoryEnabled: false,
       streaming: false,
     });
-    res.send({ response: response.data.response });
+    res.send(response.data);
   } catch (error) {
     console.error(error);
     res.send({ response: "Error occurred" });

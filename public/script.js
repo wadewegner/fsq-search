@@ -29,7 +29,7 @@ $(document).ready(function () {
         let resultText =
           '<h5 class="card-title">You asked: ' + searchVal + "</h5>";
 
-        let linksHTML = "<ul>";
+        let linksHTML = '<div class="source-links"><p>Sources:</p><ul>';
         for (let i = 0; i < data.links.length; i++) {
           linksHTML +=
             '<li><a href="' +
@@ -38,7 +38,7 @@ $(document).ready(function () {
             data.links[i] +
             "</a></li>";
         }
-        linksHTML += "</ul>";
+        linksHTML += "</ul></div>";
 
         let result =
           '<div class="card-body">' +

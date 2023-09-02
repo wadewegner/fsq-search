@@ -81,3 +81,10 @@ code {
     font-size: 12px;
   }
 }
+
+.source-links {
+  background-color: #f4f4f4; /* light gray background */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
